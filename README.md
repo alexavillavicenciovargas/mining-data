@@ -1,1 +1,1 @@
-# mining-twitter-data
+# mining-data
