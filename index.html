@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Pro Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>📊 Stock Market PRO Dashboard</h1>
+
+<form method="POST">
+    <input name="ticker" placeholder="Ej: AAPL, TSLA, NVDA">
+    <button type="submit">Analizar</button>
+</form>
+
+{% if ticker %}
+    <h2>Resultados: {{ ticker }}</h2>
+{% endif %}
+
+{% if chart %}
+    <div class="chart">
+        {{ chart | safe }}
+    </div>
+{% endif %}
+
+{% if table %}
+    <h3>Últimos datos</h3>
+    {{ table | safe }}
+{% endif %}
+
+</body>
+</html>
